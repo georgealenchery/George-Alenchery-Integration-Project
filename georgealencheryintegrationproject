@@ -1,0 +1,88 @@
+def main():
+    # George Alenchery
+    # This program is a programmed simulation of a fast food restaurant experience.
+    customer_name = input("Hello, and welcome to George's One-Stop Snack Shack! What is your name? ")
+    input("Very good, very good. How are you feeling today? ")
+    # customer_name is a variable to store the information of the user's name. This information will be later used to
+    # thank the customer and to give a farewell. customerGreeting is a variable to store the information of how the
+    # user is feeling. It helps to make the program flow better; it makes it seem more like User is talking to a human.
+
+    print(
+        "Ah, I see. When I feel like that, I'm usually in the mood for one of George's notorious specialty "
+        "Cheeseburgers.")
+    print("The Specialty Cheeseburger, coincidentally, is our special of the day!")
+    print("Why don't you take a look at our menu? ")
+    print("CHEESEBURGER: $3.50")
+
+    print("Here is our drink menu as well.")
+    print("Soft Drink (Coke Products ONLY): $0.50")
+    print("Unfortunately, our current menu items are a bit limited at the moment. We apologize for the inconvenience.")
+
+    customer_choice1 = input("How many Cheeseburgers would you like to eat today? ")
+    # customerChoice1 is a variable used to store the string data of how many cheeseburgers the customer would like
+    # to order.
+    number_of_burgers = float(customer_choice1)
+    # number_of_burgers is a variable used to store the information of the casting of the string data of
+    # customerChoice1 into a float.
+    burger_total_cost = number_of_burgers * 3.50
+    # burger_total_cost is a variable used to store the amount of burgers being ordered multiplied by the price of
+    # the burger, 3.50.
+
+    customer_choice2 = input("How many Soft Drinks would you like to order? ")
+    # customer_choice2 is a variable used to store the string data of how many drinks the customer would like to order.
+    number_of_soft_drinks = float(customer_choice2)
+    # numberOfSoftDrinks is a variable used to store the information of the casting of the string data of
+    # customerChoice2 into a float.
+    soft_drink_total_cost = number_of_soft_drinks * 0.50
+    # soft_drink_total_cost is a variable used to store the amount of drinks being ordered multiplied by the price of
+    # the burger, 3.50.
+
+    sub_total = soft_drink_total_cost + burger_total_cost
+    # subTotal is a variable used to store the addition of the total cost of soft drinks and burgers.
+    format(sub_total, "0.2f")
+    # formal(subTotal, "0.2f") is used to format the floating point data type as a number with two decimal places.
+    print("Your subtotal is $", sub_total, sep='')
+    # the sep='' function takes away the space that would normally occur between the $ and the amount of money,
+    # by replacing the space that the comma provides.
+
+    tip_amount = input("Please enter your desired tip amount. ")
+    # tipAmount is a variable used to store the amount of money the customer wishes to tip the cashier.
+    tip_amount_in_float = float(tip_amount)
+    # tip_amount_in_float is a variable used to store the tipAmount as a floating point data type.
+    total_cost = sub_total + tip_amount_in_float
+    # totalCost is a variable used to store the total amount of money the customer has to pay.
+    print("Your total cost for today will be $", format(total_cost, "0.2f"), sep='')
+    # the sep='' function takes away the space that would normally occur between the $ and the amount of money,
+    # by replacing the space that the comma provides.
+
+    print("Thank you,", customer_name + ".", "Your food will be out shortly!")
+    # the + is used for concatenation between the strings Thank you, customer_name and .
+
+    print("Hmm... It appears you are our 1 thousandth customer! That means you get to play a game to win a prize. ")
+    user_game_input = int(input("Pick a number from 1 to 20. "))
+
+    if 15 < user_game_input < 21:
+        print("You win two free cheeseburgers with a purchase of a small drink! ")
+    elif 10 < user_game_input < 15:
+        print("You win season tickets to the FGCU Eagles' Basketball Games! ")
+    elif 5 <= user_game_input <= 10:
+        print("You win a lifetime supply of George's Specialty Chicken Sandwiches! ")
+    elif 0 < user_game_input < 5:
+        print("You win a free George's One Stop Snack Shack T-Shirt! ")
+    else:
+        print("Oops, that didn't work. The number can only be from 1 to 20. ")
+
+
+main()
+
+
+print(5 - 3)
+print(16 // 3)
+print(50 % 4)
+print(20 / 5)
+print(4 ** 2)
+for x in range(10, 1):
+    print(x)
+
+
+# additional operations for basic calculations
